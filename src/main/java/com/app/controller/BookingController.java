@@ -42,6 +42,7 @@ public class BookingController {
 	@DeleteMapping("/cancel-booking/{bId}")
 	public ResponseEntity<?> cancelBooking(@PathVariable Integer bId) {
 		System.out.println("in cancel booking, bid : " + bId);
+		System.out.println(bookingService.cancelBooking(bId));
 		return new ResponseEntity<>(bookingService.cancelBooking(bId), HttpStatus.OK);
 	}
 
